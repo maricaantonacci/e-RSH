@@ -1,0 +1,11 @@
+{
+"input_onedata_token" : "xxxx",
+"output_onedata_token" : "xxxx",
+"input_onedata_space": "Marica Antonacci's space",
+"input_path": "INGV/input",
+"output_onedata_space": "Marica Antonacci's space",
+"output_path": "INGV/output/test",
+"output_filenames": "cum_e.out,Rplots.pdf",
+"output_onedata_space": "Marica Antonacci's space",
+"N" : "100" 
+}
