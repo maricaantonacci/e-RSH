@@ -17,8 +17,11 @@ WORKDIR=$MESOS_SANDBOX
 
 # Extract input
 echo Extracting input
-tar xvfz "$INPUTDIR/delft3d_repository.tar.gz" --no-same-owner -C "$WORKDIR" || exit 1
-cd "$WORKDIR"/delft3d_repository/06_delwaq || exit 2
+#tar xvfz "$INPUTDIR/delft3d_repository.tar.gz" --no-same-owner -C "$WORKDIR" || exit 1
+#cd "$WORKDIR"/delft3d_repository/06_delwaq || exit 2
+
+cd /delft3d_repository/examples/06_delwaq || exit 1
+
 
 echo Run test
 # Run Rscript
