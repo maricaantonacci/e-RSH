@@ -45,7 +45,7 @@ topology_template:
       description: Onedata space where the application output will be stored. It can be the same as the Input Onedata space
       required: yes
 
-{% for N in N_list %}  
+{% for Temp in Temp_list %}  
     output_path_{{loop.index}}:
       type: string
       description: Path to the output data inside the Output Onedata space
@@ -61,7 +61,7 @@ topology_template:
     command:
       type: string
       description: Command to execute
-      default: 'cd $MESOS_SANDBOX && /bin/bash testcumul_error_run.sh'
+      default: 'cd $MESOS_SANDBOX && /bin/bash lifewatch_run.sh'
       required: no
   
     cpus:
@@ -78,24 +78,25 @@ topology_template:
       type: string
       description: Docker image to be used to run the container application
       required: yes
-{% for N in N_list %}
-    N_{{loop.index}}:
-       type: integer
+
+{% for Temp in Temp_list %}
+    Temp_{{loop.index}}:
+       type: float
 {% endfor %}
 
   node_templates:
 
-{% for N in N_list %}
+{% for Temp in Temp_list %}
     chronos_job{{loop.index}}:
       type: tosca.nodes.indigo.Container.Application.Docker.Chronos
       properties:
         schedule: 'R0/2015-12-25T17:22:00Z/PT1M'
         description: 'Execute Application'
         command: { get_input: command }
-        uris: ['https://raw.githubusercontent.com/maricaantonacci/e-RSH/master/scripts/INGV/testcumul_error_run.sh']
+        uris: ['https://raw.githubusercontent.com/maricaantonacci/e-RSH/master/scripts/Lifewatch/lifewatch_run.sh']
         retries: 3
         environment_variables:
-          PARAMETER_N: { get_input: N_{{loop.index}} }
+          TEMP: { get_input: Temp_{{loop.index}} }
           INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
           OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
           INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }

@@ -59,7 +59,7 @@ topology_template:
     command:
       type: string
       description: Command to execute
-      default: 'cd $MESOS_SANDBOX && /bin/bash testcumul_error_run.sh'
+      default: 'cd $MESOS_SANDBOX && /bin/bash lifewatch_run.sh'
       required: no
   
     cpus:
@@ -76,8 +76,6 @@ topology_template:
       type: string
       description: Docker image to be used to run the container application
       required: yes
-    N:
-       type: integer
 
   node_templates:
 
@@ -87,10 +85,9 @@ topology_template:
         schedule: 'R0/2015-12-25T17:22:00Z/PT1M'
         description: 'Execute Application'
         command: { get_input: command }
-        uris: ['https://raw.githubusercontent.com/maricaantonacci/e-RSH/master/scripts/INGV/testcumul_error_run.sh']
+        uris: ['https://raw.githubusercontent.com/maricaantonacci/e-RSH/master/scripts/Lifewatch/lifewatch_run.sh']
         retries: 3
         environment_variables:
-          PARAMETER_N: { get_input: N }
           INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
           OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
           INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }

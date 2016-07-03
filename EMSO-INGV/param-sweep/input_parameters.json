@@ -2,9 +2,9 @@
 "input_onedata_token" : "xxxx",
 "output_onedata_token" : "xxxx",
 "input_onedata_space": "Marica Antonacci's space",
-"input_path": "INGV/input",
+"input_path": "EMSO/input",
 "output_onedata_space": "Marica Antonacci's space",
-"output_path": "INGV/output",
+"output_path": "EMSO/output",
 "output_filenames": "cum_e.out,Rplots.pdf",
 "output_onedata_space": "Marica Antonacci's space",
 "N_list" : ["10", "20", "100", "500"] 
