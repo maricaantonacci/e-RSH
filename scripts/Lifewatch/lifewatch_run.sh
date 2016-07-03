@@ -23,7 +23,7 @@ echo Extracting input
 cd /delft3d_repository/examples/06_delwaq || exit 1
 
 if [ ! -z $TEMP ]; then
- sed -i "s/.* ; Temp/$TEMP ; Temp" /delft3d_repository/examples/06_delwaq/com-tut_fti_waq.inp || exit 1
+ sed -i "s/.* ; Temp/$TEMP ; Temp/g" /delft3d_repository/examples/06_delwaq/com-tut_fti_waq.inp || exit 1
  grep "; Temp" /delft3d_repository/examples/06_delwaq/com-tut_fti_waq.inp
 fi
 
