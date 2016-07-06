@@ -76,7 +76,7 @@ topology_template:
  command:
  type: string
  description: Command to execute
- default: 'cd && /bin/bash testcumul_error_run.sh'
+ default: 'cd $MESOS_SANDBOX && /bin/bash testcumul_error_run.sh'
  required: no
  
  cpus:
