@@ -76,16 +76,16 @@ topology_template:
         uris: []
         retries: 3
         environment_variables:
-        TEMP: 'TEMP_1'
-        INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
-        OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
-        INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
-        OUTPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
-        INPUT_ONEDATA_SPACE: { get_input: input_onedata_space }
-        INPUT_PATH: { get_input: input_path }
-        OUTPUT_ONEDATA_SPACE: { get_input: output_onedata_space }
-        OUTPUT_PATH: 'OUTPUT_PATH_1'
-        OUTPUT_FILENAMES: { get_input: output_filenames }
+          TEMP: 'TEMP_1'
+          INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
+          OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
+          INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
+          OUTPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
+          INPUT_ONEDATA_SPACE: { get_input: input_onedata_space }
+          INPUT_PATH: { get_input: input_path }
+          OUTPUT_ONEDATA_SPACE: { get_input: output_onedata_space }
+          OUTPUT_PATH: 'OUTPUT_PATH_1'
+          OUTPUT_FILENAMES: { get_input: output_filenames }
       artifacts:
         image:
           file: 'marica/barridocker-oneclient' #TO BE MOVED UNDER INDIGO-DC
@@ -102,16 +102,16 @@ topology_template:
         uris: []
         retries: 3
         environment_variables:
-        TEMP: 'TEMP_2'
-        INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
-        OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
-        INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
-        OUTPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
-        INPUT_ONEDATA_SPACE: { get_input: input_onedata_space }
-        INPUT_PATH: { get_input: input_path }
-        OUTPUT_ONEDATA_SPACE: { get_input: output_onedata_space }
-        OUTPUT_PATH: 'OUTPUT_PATH_2'
-        OUTPUT_FILENAMES: { get_input: output_filenames }
+          TEMP: 'TEMP_2'
+          INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
+          OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
+          INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
+          OUTPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
+          INPUT_ONEDATA_SPACE: { get_input: input_onedata_space }
+          INPUT_PATH: { get_input: input_path }
+          OUTPUT_ONEDATA_SPACE: { get_input: output_onedata_space }
+          OUTPUT_PATH: 'OUTPUT_PATH_2'
+          OUTPUT_FILENAMES: { get_input: output_filenames }
       artifacts:
         image:
           file: 'marica/barridocker-oneclient' #TO BE MOVED UNDER INDIGO-DC
@@ -128,16 +128,16 @@ topology_template:
         uris: []
         retries: 3
         environment_variables:
-        TEMP: 'TEMP_3'
-        INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
-        OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
-        INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
-        OUTPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
-        INPUT_ONEDATA_SPACE: { get_input: input_onedata_space }
-        INPUT_PATH: { get_input: input_path }
-        OUTPUT_ONEDATA_SPACE: { get_input: output_onedata_space }
-        OUTPUT_PATH: 'OUTPUT_PATH_3'
-        OUTPUT_FILENAMES: { get_input: output_filenames }
+          TEMP: 'TEMP_3'
+          INPUT_ONEDATA_TOKEN: { get_input: input_onedata_token }
+          OUTPUT_ONEDATA_TOKEN: { get_input: output_onedata_token }
+          INPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
+          OUTPUT_ONEDATA_PROVIDERS: { get_input: output_onedata_providers }
+          INPUT_ONEDATA_SPACE: { get_input: input_onedata_space }
+          INPUT_PATH: { get_input: input_path }
+          OUTPUT_ONEDATA_SPACE: { get_input: output_onedata_space }
+          OUTPUT_PATH: 'OUTPUT_PATH_3'
+          OUTPUT_FILENAMES: { get_input: output_filenames }
       artifacts:
         image:
           file: 'marica/barridocker-oneclient' #TO BE MOVED UNDER INDIGO-DC
