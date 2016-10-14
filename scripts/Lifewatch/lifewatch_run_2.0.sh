@@ -34,7 +34,7 @@ fi
 echo Run test
 # Run Rscript
 ./run_delwaq.sh || exit 1
-tar cvfz output.tgz *
+tar cvfz output.tgz * --exclude='output.tgz'
 
 cd -
 
