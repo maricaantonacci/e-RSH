@@ -11,6 +11,7 @@ echo Start at $(date)
 INPUTDIR="/onedata/input/$INPUT_ONEDATA_SPACE/$INPUT_PATH"
 OUTPUTDIR="/onedata/output/$OUTPUT_ONEDATA_SPACE/$OUTPUT_PATH"
 
+ls "$INPUTDIR"
 
 WORKDIR="$OUTPUTDIR"
 
