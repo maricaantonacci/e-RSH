@@ -35,6 +35,8 @@ echo Run test
 ./run_delwaq.sh || exit 1
 tar cvfz output.tgz *
 
+cd -
+
 # Collect output
 #mkdir -p "$OUTPUTDIR"/
 #cp $(echo "$OUTPUT_FILENAMES" | tr ',' ' ' ) "$OUTPUTDIR"/  || exit 1
