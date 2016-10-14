@@ -37,10 +37,10 @@ echo Run test
 echo Compress output
 tar cfz "$OUTPUTDIR"/"$OUTPUT_FILENAMES" * 
 
+cd -
+
 echo Cleaning temp workspace
 rm -rf "$WORKDIR"/* && rm -rf "$WORKDIR"
-
-cd -
 
 
 echo End at $(date)
