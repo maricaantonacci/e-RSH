@@ -11,11 +11,10 @@ echo Start at $(date)
 INPUTDIR="/onedata/input/$INPUT_ONEDATA_SPACE/$INPUT_PATH"
 OUTPUTDIR="/onedata/output/$OUTPUT_ONEDATA_SPACE/$OUTPUT_PATH"
 
-ls "$INPUTDIR"
+TEMPW=$(mktemp -d --tmpdir=. workspace.XXXXXXXXXX)
+WORKDIR="$OUTPUTDIR"/$TEMPW
 
-WORKDIR="$OUTPUTDIR"
-
-mkdir -p "$OUTPUTDIR"
+mkdir -p "$WORKDIR"
 
 # Extract input
 echo Extracting input
@@ -34,14 +33,13 @@ fi
 echo Run test
 # Run Rscript
 ./run_delwaq.sh || exit 1
-tar cvfz output.tgz * --exclude='output.tgz'
+# Collect output
+tar cvfz "$OUTPUTDIR"/output.tgz * || exit 1
 
+echo Cleaning temp workspace
+rm -rf "$WORKDIR"
 cd -
 
-# Collect output
-#mkdir -p "$OUTPUTDIR"/
-#cp $(echo "$OUTPUT_FILENAMES" | tr ',' ' ' ) "$OUTPUTDIR"/  || exit 1
-#rm $WORKDIR/*
 
 echo End at $(date)
 
