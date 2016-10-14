@@ -19,7 +19,8 @@ mkdir -p "$OUTPUTDIR"
 
 # Extract input
 echo Extracting input
-tar xvfz "$INPUTDIR/06_delwaq.tar.gz" --no-same-owner -C "$WORKDIR" || exit 1
+
+find "$INPUTDIR" -name "*.tar.gz" -exec tar xvfz {} -C "$WORKDIR" \; || exit 1
 cd "$WORKDIR" || exit 2
 chmod 777 ./*.sh
 
