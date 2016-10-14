@@ -14,7 +14,7 @@ OUTPUTDIR="/onedata/output/$OUTPUT_ONEDATA_SPACE/$OUTPUT_PATH"
 mkdir -p "$OUTPUTDIR" # create if it does not exists
 TEMPW=$(mktemp -d --tmpdir="$OUTPUTDIR" workspace.XXXXXXXXXX)
 
-WORKDIR="$OUTPUTDIR"/$TEMPW
+WORKDIR="$TEMPW"
 
 # Extract input
 echo Extracting input
