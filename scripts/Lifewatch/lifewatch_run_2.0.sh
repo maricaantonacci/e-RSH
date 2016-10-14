@@ -37,7 +37,8 @@ echo Run test
 tar cvfz "$OUTPUTDIR"/output.tgz * 
 
 echo Cleaning temp workspace
-rm -rf "$WORKDIR"
+rm -rf "$WORKDIR"/* && rm -rf "$WORKDIR"
+
 cd -
 
 
