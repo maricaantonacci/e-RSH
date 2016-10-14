@@ -34,7 +34,7 @@ echo Run test
 # Run Rscript
 ./run_delwaq.sh || exit 1
 # Collect output
-tar cvfz "$OUTPUTDIR"/$"OUTPUT_FILENAMES" * 
+tar cvfz "$OUTPUTDIR"/"$OUTPUT_FILENAMES" * 
 
 echo Cleaning temp workspace
 rm -rf "$WORKDIR"/* && rm -rf "$WORKDIR"
