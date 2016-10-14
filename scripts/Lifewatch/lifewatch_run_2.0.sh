@@ -11,10 +11,10 @@ echo Start at $(date)
 INPUTDIR="/onedata/input/$INPUT_ONEDATA_SPACE/$INPUT_PATH"
 OUTPUTDIR="/onedata/output/$OUTPUT_ONEDATA_SPACE/$OUTPUT_PATH"
 
+mkdir -p "$OUTPUTDIR" # create if it does not exists
 TEMPW=$(mktemp -d --tmpdir=. workspace.XXXXXXXXXX)
-WORKDIR="$OUTPUTDIR"/$TEMPW
 
-mkdir -p "$WORKDIR"
+WORKDIR="$OUTPUTDIR"/$TEMPW
 
 # Extract input
 echo Extracting input
