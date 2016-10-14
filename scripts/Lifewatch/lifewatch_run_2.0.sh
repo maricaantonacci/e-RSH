@@ -33,6 +33,9 @@ fi
 echo Run test
 # Run Rscript
 ./run_delwaq.sh || exit 1
+
+sleep 3
+
 # Collect output
 echo Compressing output: 
 tar cfz "$OUTPUTDIR"/"$OUTPUT_FILENAMES" * 
