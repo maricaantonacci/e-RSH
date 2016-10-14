@@ -19,11 +19,11 @@ WORKDIR="$TEMPW"
 # Extract input
 echo Extracting input
 
-find "$INPUTDIR" -name "*.tar.gz" -exec tar xvfz {} --no-same-owner -C "$WORKDIR" \; || exit 1
+find "$INPUTDIR" -name "*.tar.gz" -exec tar xfz {} --no-same-owner -C "$WORKDIR" \; || exit 1
 cd "$WORKDIR" || exit 2
 chmod 777 ./*.sh
 
-echo Editting $D3D_PARAM with value $D3D_VALUE
+echo Editing $D3D_PARAM with value $D3D_VALUE
 
 if [ ! -z $D3D_PARAM ]; then
  sed -i "s/.* ; $D3D_PARAM/$D3D_VALUE ; $D3D_PARAM/g" $INPUT_CONFIG_FILE || exit 1
@@ -34,7 +34,8 @@ echo Run test
 # Run Rscript
 ./run_delwaq.sh || exit 1
 # Collect output
-tar cvfz "$OUTPUTDIR"/"$OUTPUT_FILENAMES" * 
+echo Compress output
+tar cfz "$OUTPUTDIR"/"$OUTPUT_FILENAMES" * 
 
 echo Cleaning temp workspace
 rm -rf "$WORKDIR"/* && rm -rf "$WORKDIR"
