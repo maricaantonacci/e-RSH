@@ -30,7 +30,7 @@ fi
 echo Run test
 # Run Rscript
 ./run_delwaq.sh || exit 1
-tar cvfz output.tgz *
+tar cvfz "$OUTPUT_FILENAMES" *
 
 # Collect output
 mkdir -p "$OUTPUTDIR"/
