@@ -21,6 +21,11 @@ echo Extracting input
 
 find "$INPUTDIR" -name "*.tar.gz" -exec tar xfz {} --no-same-owner -C "$WORKDIR" \; || exit 1
 cd "$WORKDIR" || exit 2
+
+echo Listing directory content:
+ls -latr
+echo "*************"
+
 chmod 777 ./*.sh
 
 echo Editing $D3D_PARAM with value $D3D_VALUE
